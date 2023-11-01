@@ -3,14 +3,39 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../routes/app_pages.dart';
-import '../../constant/color.dart';
-import '../../constant/file_string.dart';
+import '../../constants/color.dart';
+import '../../constants/file_string.dart';
 import '../tools/button_text.dart';
 
 class Header extends StatelessWidget {
-  const Header({
+  Header({
     super.key,
+    required this.cBeranda,
+    required this.cTentang,
+    required this.cKontak,
+    required this.cSiriel,
+    required this.pBeranda,
+    required this.pTentang,
+    required this.pKontak,
+    required this.pSiriel,
+    required this.wBeranda,
+    required this.wTentang,
+    required this.wKontak,
+    required this.wSiriel,
   });
+
+  final Color cBeranda;
+  final Color cTentang;
+  final Color cKontak;
+  final Color cSiriel;
+  final VoidCallback pBeranda;
+  final VoidCallback pTentang;
+  final VoidCallback pKontak;
+  final VoidCallback pSiriel;
+  final FontWeight wBeranda;
+  final FontWeight wTentang;
+  final FontWeight wKontak;
+  final FontWeight wSiriel;
 
   @override
   Widget build(BuildContext context) {
@@ -45,37 +70,31 @@ class Header extends StatelessWidget {
             children: [
               ButtonText(
                 title: "BERANDA",
-                press: () {},
-                color: cBlue,
+                press: pBeranda,
+                color: cBeranda,
                 size: 20,
-                weight: FontWeight.w500,
+                weight: wBeranda,
               ),
               ButtonText(
                 title: "TENTANG",
-                press: () => Get.toNamed(
-                  Routes.about,
-                ),
-                color: cBlack,
+                press: pTentang,
+                color: cTentang,
                 size: 20,
-                weight: FontWeight.w200,
+                weight: wTentang,
               ),
               ButtonText(
                 title: "KONTAK",
-                press: () => Get.toNamed(
-                  Routes.contact,
-                ),
-                color: cBlack,
+                press: pKontak,
+                color: cKontak,
                 size: 20,
-                weight: FontWeight.w200,
+                weight: wKontak,
               ),
               ButtonText(
                 title: "SIRIEL",
-                press: () => Get.toNamed(
-                  Routes.siriel,
-                ),
-                color: cBlack,
+                press: pSiriel,
+                color: cSiriel,
                 size: 20,
-                weight: FontWeight.w200,
+                weight: wSiriel,
               ),
               const SizedBox(
                 width: 30,
