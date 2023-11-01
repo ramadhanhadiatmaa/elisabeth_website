@@ -1,16 +1,22 @@
-import '../../../data/constant/color.dart';
-import '../../../data/constant/file_string.dart';
-import '../../../data/widget/sections/header.dart';
+import 'package:intl/intl.dart';
+
+import '../../../data/constants/color.dart';
+import '../../../data/constants/file_string.dart';
+import '../../../data/widgets/sections/banner.dart';
+import '../../../data/widgets/sections/header.dart';
 
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+import '../../../data/widgets/tools/text_widget.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
+
+  final homeC = Get.put(HomeController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,73 +35,27 @@ class HomeView extends GetView<HomeController> {
             ),
             Column(
               children: [
-                const Header(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const TextWidget(
-                          title: "Selamat datang,",
-                          size: 20,
-                          weight: FontWeight.w200,
-                          color: cBlack,
-                        ),
-                        const TextWidget(
-                          title: "Sehat lebih mudah",
-                          size: 32,
-                          weight: FontWeight.w400,
-                          color: cBlue,
-                        ),
-                        const TextWidget(
-                          title: "dalam genggaman tangan",
-                          size: 32,
-                          weight: FontWeight.w400,
-                          color: cBlue,
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        ElevatedButton(
-                          onPressed: () => Get.toNamed(Routes.booking),
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: cBlue,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  10,
-                                ),
-                              )),
-                          child: const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: TextWidget(
-                              title: "Mendaftar Online",
-                              size: 24,
-                              weight: FontWeight.w400,
-                              color: cWhite,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 40,
-                    ),
-                    const Image(
-                      height: 450,
-                      image: AssetImage(
-                        side,
-                      ),
-                    ),
-                  ],
+                Header(
+                  cBeranda: cBlue,
+                  cTentang: cBlack,
+                  cKontak: cBlack,
+                  cSiriel: cBlack,
+                  pBeranda: () {},
+                  pTentang: () => Get.toNamed(Routes.about),
+                  pKontak: () => Get.toNamed(Routes.contact),
+                  pSiriel: () => Get.toNamed(Routes.siriel),
+                  wBeranda: FontWeight.w500,
+                  wTentang: FontWeight.w200,
+                  wKontak: FontWeight.w200,
+                  wSiriel: FontWeight.w200,
                 ),
+                const Banners(),
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 50,
                   ),
                   child: Container(
-                    height: 200,
+                    height: 340,
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
                       color: cBlue.withOpacity(
@@ -107,10 +67,10 @@ class HomeView extends GetView<HomeController> {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
-                        TextWidget(
+                        const TextWidget(
                           title: "Informasi Poli",
                           size: 20,
                           weight: FontWeight.w500,
@@ -118,10 +78,164 @@ class HomeView extends GetView<HomeController> {
                         ),
                         TextWidget(
                           title:
-                              "Data informasi poli rawat jalan Rumah Sakit Umum Santa Elisabeth hari ini",
+                              "Informasi poli Rumah Sakit Umum Santa Elisabeth pada, ${DateFormat.yMd().format(DateTime.now())}, jam ${DateFormat.Hm().format(DateTime.now())}",
                           size: 14,
                           weight: FontWeight.w200,
                           color: cWhite,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FutureBuilder(
+                                future: homeC.fetchPoliData(),
+                                builder: (context, snapshot) {
+                                  if (!snapshot.hasData) {
+                                    return const CircularProgressIndicator();
+                                  }
+                                  return SizedBox(
+                                    height: 216,
+                                    width: homeC.poliList.length * 216,
+                                    child: Center(
+                                      child: ListView.builder(
+                                          scrollDirection: Axis.horizontal,
+                                          itemCount: homeC.poliList.length,
+                                          itemBuilder: (context, index) {
+                                            return Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: cWhite,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                      20,
+                                                    ),
+                                                    boxShadow: [
+                                                      BoxShadow(
+                                                        color: cWhite
+                                                            .withOpacity(0.2),
+                                                        spreadRadius: 6.0,
+                                                        blurRadius: 6.0,
+                                                        offset:
+                                                            const Offset(3, 3),
+                                                      )
+                                                    ]),
+                                                width: 200,
+                                                child: Stack(
+                                                  children: [
+                                                    Positioned(
+                                                      bottom: 0,
+                                                      child: Container(
+                                                        width: 200,
+                                                        height: 30,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color: (homeC
+                                                                      .poliList[
+                                                                          index]
+                                                                      .status ==
+                                                                  "Buka")
+                                                              ? cBlue
+                                                              : cRed,
+                                                          borderRadius:
+                                                              const BorderRadius
+                                                                  .only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                              20,
+                                                            ),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                              20,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Positioned(
+                                                      bottom: 5,
+                                                      left: 0,
+                                                      right: 0,
+                                                      child: Align(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        child: TextWidget(
+                                                          title: homeC
+                                                              .poliList[index]
+                                                              .status
+                                                              .toString(),
+                                                          size: 14,
+                                                          weight:
+                                                              FontWeight.bold,
+                                                          color: cWhite,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Column(
+                                                          children: [
+                                                            const SizedBox(
+                                                              height: 20,
+                                                            ),
+                                                            ClipOval(
+                                                              child: Image(
+                                                                image:
+                                                                    NetworkImage(
+                                                                  homeC
+                                                                      .poliList[
+                                                                          index]
+                                                                      .foto
+                                                                      .toString(),
+                                                                ),
+                                                                height: 100,
+                                                                width: 100,
+                                                              ),
+                                                            ),
+                                                            const SizedBox(
+                                                              height: 10,
+                                                            ),
+                                                            TextWidget(
+                                                              title: homeC
+                                                                  .poliList[
+                                                                      index]
+                                                                  .dokter
+                                                                  .toString(),
+                                                              size: 10,
+                                                              weight: FontWeight
+                                                                  .w300,
+                                                              color: cBlack,
+                                                            ),
+                                                            TextWidget(
+                                                              title: homeC
+                                                                  .poliList[
+                                                                      index]
+                                                                  .nama
+                                                                  .toString(),
+                                                              size: 14,
+                                                              weight: FontWeight
+                                                                  .w500,
+                                                              color: cBlack,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            );
+                                          }),
+                                    ),
+                                  );
+                                }),
+                          ],
                         ),
                       ],
                     ),
@@ -133,34 +247,5 @@ class HomeView extends GetView<HomeController> {
         ),
       ],
     ));
-  }
-}
-
-class TextWidget extends StatelessWidget {
-  const TextWidget({
-    super.key,
-    required this.title,
-    required this.size,
-    required this.weight,
-    required this.color,
-    this.align,
-  });
-
-  final String title;
-  final double size;
-  final FontWeight weight;
-  final Color color;
-  final TextAlign? align;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: GoogleFonts.poppins(
-        color: color,
-        fontSize: size,
-        fontWeight: weight,
-      ),
-    );
   }
 }
