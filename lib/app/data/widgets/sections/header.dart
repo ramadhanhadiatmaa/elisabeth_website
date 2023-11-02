@@ -8,7 +8,7 @@ import '../../constants/file_string.dart';
 import '../tools/button_text.dart';
 
 class Header extends StatelessWidget {
-  Header({
+  const Header({
     super.key,
     required this.cBeranda,
     required this.cTentang,

@@ -21,7 +21,7 @@ class AboutView extends GetView<AboutController> {
               cTentang: cBlue,
               cKontak: cBlack,
               cSiriel: cBlack,
-              pBeranda: () => Get.offAllNamed(Routes.home),
+              pBeranda: () => Get.toNamed(Routes.home),
               pTentang: () {},
               pKontak: () => Get.toNamed(Routes.contact),
               pSiriel: () => Get.toNamed(Routes.siriel),
