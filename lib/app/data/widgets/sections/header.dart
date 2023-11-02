@@ -56,7 +56,7 @@ class Header extends StatelessWidget {
                 width: 10,
               ),
               Text(
-                "RSU SANTA ELISABETH SAMBAS",
+                "SANTA ELISABETH SAMBAS",
                 style: GoogleFonts.poppins(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,

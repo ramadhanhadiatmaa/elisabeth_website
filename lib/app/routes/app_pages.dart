@@ -8,8 +8,12 @@ import '../modules/contact/bindings/contact_binding.dart';
 import '../modules/contact/views/contact_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/privacy/bindings/privacy_binding.dart';
+import '../modules/privacy/views/privacy_view.dart';
 import '../modules/siriel/bindings/siriel_binding.dart';
 import '../modules/siriel/views/siriel_view.dart';
+import '../modules/terms/bindings/terms_binding.dart';
+import '../modules/terms/views/terms_view.dart';
 
 part 'app_routes.dart';
 
@@ -43,6 +47,16 @@ class AppPages {
       name: _Paths.siriel,
       page: () => const SirielView(),
       binding: SirielBinding(),
+    ),
+    GetPage(
+      name: _Paths.terms,
+      page: () => const TermsView(),
+      binding: TermsBinding(),
+    ),
+    GetPage(
+      name: _Paths.privacy,
+      page: () => const PrivacyView(),
+      binding: PrivacyBinding(),
     ),
   ];
 }
