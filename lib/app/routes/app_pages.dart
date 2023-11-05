@@ -30,7 +30,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.about,
-      page: () => const AboutView(),
+      page: () => AboutView(),
       binding: AboutBinding(),
     ),
     GetPage(
