@@ -8,14 +8,10 @@ class SirielView extends GetView<SirielController> {
   const SirielView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('SirielView'),
-        centerTitle: true,
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Text(
-          'SirielView is working',
+          'Sistem Informasi Rawat Inap Santa Elisabeth',
           style: TextStyle(fontSize: 20),
         ),
       ),

@@ -21,6 +21,7 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
+      textAlign: align,
       style: GoogleFonts.poppins(
         color: color,
         fontSize: size,
@@ -50,6 +51,7 @@ class TextWidgetMon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
+      textAlign: align,
       style: GoogleFonts.montserrat(
         color: color,
         fontSize: size,

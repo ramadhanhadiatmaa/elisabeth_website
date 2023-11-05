@@ -2,6 +2,9 @@ const String logo = "assets/images/logo_santa.png";
 const String back = "assets/images/background.png";
 const String side = "assets/images/image_side.png";
 
+const String mandiri = "assets/images/image_mandiri.png";
+const String bpjs = "assets/images/image_bpjs.png";
+
 const String img1 = "assets/images/image_igd.png";
 const String img2 = "assets/images/image_ambulance.png";
 const String img3 = "assets/images/image_medis.png";

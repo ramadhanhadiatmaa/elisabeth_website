@@ -1,5 +1,6 @@
 import 'package:elisabeth_website/app/data/constants/color.dart';
 import 'package:elisabeth_website/app/data/widgets/sections/header.dart';
+import 'package:elisabeth_website/app/modules/home/controllers/home_controller.dart';
 import 'package:elisabeth_website/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,8 @@ import 'package:get/get.dart';
 import '../controllers/about_controller.dart';
 
 class AboutView extends GetView<AboutController> {
-  const AboutView({Key? key}) : super(key: key);
+  AboutView({Key? key}) : super(key: key);
+  final HomeController homeC = HomeController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +23,7 @@ class AboutView extends GetView<AboutController> {
               cTentang: cBlue,
               cKontak: cBlack,
               cSiriel: cBlack,
-              pBeranda: () => Get.offAllNamed(Routes.home),
+              pBeranda: () => Get.toNamed(Routes.home),
               pTentang: () {},
               pKontak: () => Get.toNamed(Routes.contact),
               pSiriel: () => Get.toNamed(Routes.siriel),

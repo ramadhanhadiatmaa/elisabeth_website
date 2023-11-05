@@ -8,6 +8,8 @@ abstract class Routes {
   static const contact = _Paths.contact;
   static const booking = _Paths.booking;
   static const siriel = _Paths.siriel;
+  static const terms = _Paths.terms;
+  static const privacy = _Paths.privacy;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const contact = '/contact';
   static const booking = '/booking';
   static const siriel = '/siriel';
+  static const terms = '/terms';
+  static const privacy = '/privacy';
 }
