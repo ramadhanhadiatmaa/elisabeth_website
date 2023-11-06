@@ -1,23 +1,23 @@
-const String logo = "assets/images/logo_santa.png";
-const String back = "assets/images/background.png";
-const String side = "assets/images/image_side.png";
+const String logo = "logo_santa.png";
+const String back = "background.png";
+const String side = "image_side.png";
 
-const String mandiri = "assets/images/image_mandiri.png";
-const String bpjs = "assets/images/image_bpjs.png";
+const String mandiri = "image_mandiri.png";
+const String bpjs = "image_bpjs.png";
 
-const String img1 = "assets/images/image_igd.png";
-const String img2 = "assets/images/image_ambulance.png";
-const String img3 = "assets/images/image_medis.png";
-const String img4 = "assets/images/image_ranap.png";
-const String img5 = "assets/images/image_rajal.png";
-const String img6 = "assets/images/image_radio.png";
-const String img7 = "assets/images/image_lab.png";
-const String img8 = "assets/images/image_spesialis.png";
-const String img9 = "assets/images/image_umum.png";
-const String img10 = "assets/images/image_operasi.png";
-const String img11 = "assets/images/image_apotik.png";
-const String img12 = "assets/images/image_nicu.png";
-const String img13 = "assets/images/image_kandungan.png";
+const String img1 = "image_igd.png";
+const String img2 = "image_ambulance.png";
+const String img3 = "image_medis.png";
+const String img4 = "image_ranap.png";
+const String img5 = "image_rajal.png";
+const String img6 = "image_radio.png";
+const String img7 = "image_lab.png";
+const String img8 = "image_spesialis.png";
+const String img9 = "image_umum.png";
+const String img10 = "image_operasi.png";
+const String img11 = "image_apotik.png";
+const String img12 = "image_nicu.png";
+const String img13 = "image_kandungan.png";
 
 const String text1 = "IGD 24 Jam";
 const String text2 = "Ambulance";

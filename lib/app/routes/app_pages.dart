@@ -40,7 +40,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.booking,
-      page: () => const BookingView(),
+      page: () => BookingView(),
       binding: BookingBinding(),
     ),
     GetPage(

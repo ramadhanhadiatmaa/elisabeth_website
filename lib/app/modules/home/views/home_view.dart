@@ -94,7 +94,7 @@ class HomeView extends GetView<HomeController> {
                         ),
                       ),
                     ),
-                    onPressed: () => Get.offAndToNamed(Routes.booking),
+                    onPressed: () => Get.toNamed(Routes.booking),
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 8.0,

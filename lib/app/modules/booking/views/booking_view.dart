@@ -1,24 +1,17 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
+import '../../../data/widgets/sections/booking_section.dart';
 import '../controllers/booking_controller.dart';
 
 class BookingView extends GetView<BookingController> {
-  const BookingView({Key? key}) : super(key: key);
+  BookingView({Key? key}) : super(key: key);
+
+  final bookC = Get.put(BookingController());
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('BookingView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'BookingView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+    return const Scaffold(
+      body: BookingSection(),
     );
   }
 }
