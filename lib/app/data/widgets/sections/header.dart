@@ -42,14 +42,17 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       desktop: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 15.0,
+          vertical: 10.0,
+        ),
         child: Row(
           children: [
             Row(
               children: [
                 const Image(
-                  height: 50,
-                  width: 50,
+                  height: 40,
+                  width: 40,
                   image: AssetImage(
                     logo,
                   ),
@@ -57,13 +60,27 @@ class Header extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "SANTA ELISABETH SAMBAS",
-                  style: GoogleFonts.poppins(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "RUMAH SAKIT UMUM",
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "SANTA ELISABETH SAMBAS",
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -156,13 +173,26 @@ class Header extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "SANTA ELISABETH SAMBAS",
-                  style: GoogleFonts.poppins(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "RUMAH SAKIT UMUM",
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "SANTA ELISABETH SAMBAS",
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -198,13 +228,26 @@ class Header extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  "SANTA ELISABETH SAMBAS",
-                  style: GoogleFonts.poppins(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black,
-                  ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "RUMAH SAKIT UMUM",
+                      style: GoogleFonts.poppins(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      "SANTA ELISABETH SAMBAS",
+                      style: GoogleFonts.poppins(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
