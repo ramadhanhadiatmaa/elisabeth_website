@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../data/constants/color.dart';
+import '../../../data/widgets/sections/contact_section.dart';
 import '../../../data/widgets/sections/footer.dart';
 import '../../../data/widgets/sections/header.dart';
 import '../../../data/widgets/tools/button_text.dart';
 import '../../../data/widgets/tools/text_widget.dart';
-import '../../../data/widgets/tools/title_widget.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/contact_controller.dart';
 
@@ -63,7 +63,7 @@ class ContactView extends GetView<ContactController> {
                     weight: FontWeight.w500,
                   ),
                   ButtonText(
-                    title: "SIRIEL",
+                    title: "TEMPAT TIDUR",
                     press: () {
                       Get.offAndToNamed(Routes.siriel);
                     },
@@ -133,18 +133,7 @@ class ContactView extends GetView<ContactController> {
                       wKontak: FontWeight.w500,
                       wSiriel: FontWeight.w200,
                     ),
-                    Column(
-                      children: [
-                        const TitleWidget(
-                          title: "Kontak Rumah Sakit",
-                          size: 16,
-                        ),
-                        Container(
-                          height: 900,
-                          color: cWhite,
-                        )
-                      ],
-                    ),
+                    const ContactSection(),
                     const Footers()
                   ],
                 ),

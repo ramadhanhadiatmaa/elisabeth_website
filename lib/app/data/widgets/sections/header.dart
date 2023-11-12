@@ -109,7 +109,7 @@ class Header extends StatelessWidget {
                   weight: wKontak,
                 ),
                 ButtonText(
-                  title: "SIRIEL",
+                  title: "TEMPAT TIDUR",
                   press: pSiriel,
                   color: cSiriel,
                   size: 20,

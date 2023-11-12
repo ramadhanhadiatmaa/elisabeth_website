@@ -10,6 +10,7 @@ abstract class Routes {
   static const siriel = _Paths.siriel;
   static const terms = _Paths.terms;
   static const privacy = _Paths.privacy;
+  static const doctor = _Paths.doctor;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const siriel = '/siriel';
   static const terms = '/terms';
   static const privacy = '/privacy';
+  static const doctor = '/doctor';
 }

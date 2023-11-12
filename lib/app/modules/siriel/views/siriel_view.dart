@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../../../data/constants/color.dart';
+import '../../../data/widgets/sections/bed_section.dart';
 import '../../../data/widgets/sections/footer.dart';
 import '../../../data/widgets/sections/header.dart';
 import '../../../data/widgets/tools/button_text.dart';
 import '../../../data/widgets/tools/text_widget.dart';
-import '../../../data/widgets/tools/title_widget.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/siriel_controller.dart';
 
 class SirielView extends GetView<SirielController> {
-  const SirielView({Key? key}) : super(key: key);
+  SirielView({Key? key}) : super(key: key);
+
+  final sirielC = Get.put(SirielController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +66,7 @@ class SirielView extends GetView<SirielController> {
                     weight: FontWeight.w300,
                   ),
                   ButtonText(
-                    title: "SIRIEL",
+                    title: "TEMPAT TIDUR",
                     press: () {
                       Navigator.pop(context);
                     },
@@ -134,19 +136,7 @@ class SirielView extends GetView<SirielController> {
                       wKontak: FontWeight.w200,
                       wSiriel: FontWeight.w500,
                     ),
-                    Column(
-                      children: [
-                        const TitleWidget(
-                          title:
-                              "Sistem Informasi Rawat Inap Rumah Sakit Elisabeth",
-                          size: 16,
-                        ),
-                        Container(
-                          height: 900,
-                          color: cWhite,
-                        )
-                      ],
-                    ),
+                    BedSection(sirielC: sirielC),
                     const Footers()
                   ],
                 ),

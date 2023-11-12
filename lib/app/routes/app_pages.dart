@@ -6,6 +6,8 @@ import '../modules/booking/bindings/booking_binding.dart';
 import '../modules/booking/views/booking_view.dart';
 import '../modules/contact/bindings/contact_binding.dart';
 import '../modules/contact/views/contact_view.dart';
+import '../modules/doctor/bindings/doctor_binding.dart';
+import '../modules/doctor/views/doctor_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/privacy/bindings/privacy_binding.dart';
@@ -45,7 +47,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.siriel,
-      page: () => const SirielView(),
+      page: () => SirielView(),
       binding: SirielBinding(),
     ),
     GetPage(
@@ -57,6 +59,11 @@ class AppPages {
       name: _Paths.privacy,
       page: () => const PrivacyView(),
       binding: PrivacyBinding(),
+    ),
+    GetPage(
+      name: _Paths.doctor,
+      page: () => const DoctorView(),
+      binding: DoctorBinding(),
     ),
   ];
 }

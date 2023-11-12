@@ -66,7 +66,7 @@ class AboutView extends GetView<AboutController> {
                     weight: FontWeight.w300,
                   ),
                   ButtonText(
-                    title: "SIRIEL",
+                    title: "TEMPAT TIDUR",
                     press: () {
                       Get.offAndToNamed(Routes.siriel);
                     },

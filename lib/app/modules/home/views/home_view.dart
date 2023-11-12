@@ -74,7 +74,7 @@ class HomeView extends GetView<HomeController> {
                     weight: FontWeight.w300,
                   ),
                   ButtonText(
-                    title: "SIRIEL",
+                    title: "TEMPAT TIDUR",
                     press: () {
                       Get.offAndToNamed(Routes.siriel);
                     },
