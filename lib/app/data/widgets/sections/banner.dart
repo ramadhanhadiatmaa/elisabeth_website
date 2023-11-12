@@ -71,10 +71,10 @@ class Banners extends StatelessWidget {
             width: 30,
           ),
           const Image(
-            height: 450,
             image: AssetImage(
               side,
             ),
+            height: 450,
           ),
         ],
       ),

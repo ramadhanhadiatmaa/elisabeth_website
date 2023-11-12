@@ -10,6 +10,8 @@ class HomeController extends GetxController {
   var poliList = <PoliModel>[].obs;
   var dokterList = <DokterModel>[].obs;
 
+  var gambarSatu = "".obs;
+
   @override
   void onInit() {
     fetchData();

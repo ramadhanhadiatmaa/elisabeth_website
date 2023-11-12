@@ -13,6 +13,7 @@ void main() async {
       title: "Santa Elisabeth Sambas",
       initialRoute: Routes.home,
       getPages: AppPages.routes,
+      defaultTransition: Transition.noTransition,
     ),
   );
 }

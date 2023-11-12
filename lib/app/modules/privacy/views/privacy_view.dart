@@ -1,7 +1,9 @@
+import 'package:elisabeth_website/app/data/constants/color.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../data/widgets/sections/privacy_section.dart';
 import '../controllers/privacy_controller.dart';
 
 class PrivacyView extends GetView<PrivacyController> {
@@ -9,16 +11,17 @@ class PrivacyView extends GetView<PrivacyController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PrivacyView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'PrivacyView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: const Text('Privacy Policy'),
+          centerTitle: true,
+          backgroundColor: cBlue,
+          leading: IconButton(
+            onPressed: () => Get.back(),
+            icon: const Icon(
+              Icons.arrow_back_outlined,
+            ),
+          ),
         ),
-      ),
-    );
+        body: const PrivacySection());
   }
 }

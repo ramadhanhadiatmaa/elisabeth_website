@@ -1,7 +1,9 @@
+import 'package:elisabeth_website/app/data/constants/color.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../data/widgets/sections/term_section.dart';
 import '../controllers/terms_controller.dart';
 
 class TermsView extends GetView<TermsController> {
@@ -9,16 +11,17 @@ class TermsView extends GetView<TermsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('TermsView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'TermsView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: const Text('Terms And Condition'),
+          centerTitle: true,
+          backgroundColor: cBlue,
+          leading: IconButton(
+            onPressed: () => Get.back(),
+            icon: const Icon(
+              Icons.arrow_back_outlined,
+            ),
+          ),
         ),
-      ),
-    );
+        body: const TermSection());
   }
 }
