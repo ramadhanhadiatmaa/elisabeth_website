@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/about/bindings/about_binding.dart';
 import '../modules/about/views/about_view.dart';
+import '../modules/baru/bindings/baru_binding.dart';
+import '../modules/baru/views/baru_view.dart';
 import '../modules/booking/bindings/booking_binding.dart';
 import '../modules/booking/views/booking_view.dart';
 import '../modules/contact/bindings/contact_binding.dart';
@@ -10,6 +12,8 @@ import '../modules/doctor/bindings/doctor_binding.dart';
 import '../modules/doctor/views/doctor_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/lama/bindings/lama_binding.dart';
+import '../modules/lama/views/lama_view.dart';
 import '../modules/privacy/bindings/privacy_binding.dart';
 import '../modules/privacy/views/privacy_view.dart';
 import '../modules/siriel/bindings/siriel_binding.dart';
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.doctor,
       page: () => const DoctorView(),
       binding: DoctorBinding(),
+    ),
+    GetPage(
+      name: _Paths.baru,
+      page: () => BaruView(),
+      binding: BaruBinding(),
+    ),
+    GetPage(
+      name: _Paths.lama,
+      page: () => LamaView(),
+      binding: LamaBinding(),
     ),
   ];
 }

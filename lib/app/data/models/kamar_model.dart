@@ -1,42 +1,38 @@
-// To parse this JSON data, do
-//
-//     final kamarModel = kamarModelFromJson(jsonString);
-
 import 'dart:convert';
 
-KamarModel kamarModelFromJson(String str) =>
-    KamarModel.fromJson(json.decode(str));
+DokterModel dokterModelFromJson(String str) =>
+    DokterModel.fromJson(json.decode(str));
 
-String kamarModelToJson(KamarModel data) => json.encode(data.toJson());
+String dokterModelToJson(DokterModel data) => json.encode(data.toJson());
 
-class KamarModel {
+class DokterModel {
   String id;
-  String markusNicu;
-  String markusVvip;
-  String markusVip;
+  String markusnicu;
+  String markusvvip;
+  String markusvip;
   String lukas;
   String maria;
   String fransiskus;
   String matius;
   String teresia;
-  String teresiaTiga;
+  String teresiatiga;
   String yosef;
   String klara;
   String egidio;
   String yohanes;
   DateTime updatedAt;
 
-  KamarModel({
+  DokterModel({
     required this.id,
-    required this.markusNicu,
-    required this.markusVvip,
-    required this.markusVip,
+    required this.markusnicu,
+    required this.markusvvip,
+    required this.markusvip,
     required this.lukas,
     required this.maria,
     required this.fransiskus,
     required this.matius,
     required this.teresia,
-    required this.teresiaTiga,
+    required this.teresiatiga,
     required this.yosef,
     required this.klara,
     required this.egidio,
@@ -44,17 +40,17 @@ class KamarModel {
     required this.updatedAt,
   });
 
-  factory KamarModel.fromJson(Map<String, dynamic> json) => KamarModel(
+  factory DokterModel.fromJson(Map<String, dynamic> json) => DokterModel(
         id: json["id"],
-        markusNicu: json["markus_nicu"],
-        markusVvip: json["markus_vvip"],
-        markusVip: json["markus_vip"],
+        markusnicu: json["markusnicu"],
+        markusvvip: json["markusvvip"],
+        markusvip: json["markusvip"],
         lukas: json["lukas"],
         maria: json["maria"],
         fransiskus: json["fransiskus"],
         matius: json["matius"],
         teresia: json["teresia"],
-        teresiaTiga: json["teresia_tiga"],
+        teresiatiga: json["teresiatiga"],
         yosef: json["yosef"],
         klara: json["klara"],
         egidio: json["egidio"],
@@ -64,15 +60,15 @@ class KamarModel {
 
   Map<String, dynamic> toJson() => {
         "id": id,
-        "markus_nicu": markusNicu,
-        "markus_vvip": markusVvip,
-        "markus_vip": markusVip,
+        "markusnicu": markusnicu,
+        "markusvvip": markusvvip,
+        "markusvip": markusvip,
         "lukas": lukas,
         "maria": maria,
         "fransiskus": fransiskus,
         "matius": matius,
         "teresia": teresia,
-        "teresia_tiga": teresiaTiga,
+        "teresiatiga": teresiatiga,
         "yosef": yosef,
         "klara": klara,
         "egidio": egidio,

@@ -32,7 +32,7 @@ class BedSection extends StatelessWidget {
                 Container(
                   color: cBlue,
                   width: 700,
-                  height: 50,
+                  height: 70,
                   child: const Center(
                     child: TextWidgetMon(
                       title: "Total Kamar : 47",
@@ -45,7 +45,7 @@ class BedSection extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
+                /* Container(
                   color: cBlue,
                   width: 700,
                   height: 50,
@@ -73,10 +73,10 @@ class BedSection extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                ),
-                const SizedBox(
+                ), */
+                /* const SizedBox(
                   height: 20,
-                ),
+                ), */
                 SizedBox(
                   width: 700,
                   child: Table(
@@ -134,7 +134,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      TableRow(
+                      /* TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -172,14 +172,14 @@ class BedSection extends StatelessWidget {
                                 padding: EdgeInsets.all(8.0),
                                 child: TextWidgetMon(
                                   align: TextAlign.center,
-                                  title: "48",
+                                  title: "47",
                                   size: 14,
                                   weight: FontWeight.w400,
                                   color: cBlue,
                                 ),
                               ),
                             ),
-                          ]),
+                          ]), */
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
@@ -194,7 +194,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusNicu.value,
+                                title: sirielC.markusnicu.value,
                               ),
                             ),
                           ]),
@@ -212,7 +212,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVvip.value,
+                                title: sirielC.markusvvip.value,
                               ),
                             ),
                           ]),
@@ -230,7 +230,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVip.value,
+                                title: sirielC.markusvip.value,
                               ),
                             ),
                           ]),
@@ -356,7 +356,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.teresiaTiga.value,
+                                title: sirielC.teresiatiga.value,
                               ),
                             ),
                           ]),
@@ -445,7 +445,7 @@ class BedSection extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
+                /*  const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -476,7 +476,7 @@ class BedSection extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                ),
+                ),*/
                 const SizedBox(
                   height: 20,
                 ),
@@ -537,7 +537,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      TableRow(
+                      /*  TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -582,7 +582,7 @@ class BedSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ]),
+                          ]), */
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
@@ -597,7 +597,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusNicu.value,
+                                title: sirielC.markusnicu.value,
                               ),
                             ),
                           ]),
@@ -615,7 +615,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVvip.value,
+                                title: sirielC.markusvvip.value,
                               ),
                             ),
                           ]),
@@ -633,7 +633,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVip.value,
+                                title: sirielC.markusvip.value,
                               ),
                             ),
                           ]),
@@ -759,7 +759,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.teresiaTiga.value,
+                                title: sirielC.teresiatiga.value,
                               ),
                             ),
                           ]),
@@ -848,7 +848,7 @@ class BedSection extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
+                /* const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -879,7 +879,7 @@ class BedSection extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                ),
+                ), */
                 const SizedBox(
                   height: 20,
                 ),
@@ -940,7 +940,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      TableRow(
+                      /*  TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -985,7 +985,7 @@ class BedSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ]),
+                          ]), */
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
@@ -1000,7 +1000,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusNicu.value,
+                                title: sirielC.markusnicu.value,
                               ),
                             ),
                           ]),
@@ -1018,7 +1018,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVvip.value,
+                                title: sirielC.markusvvip.value,
                               ),
                             ),
                           ]),
@@ -1036,7 +1036,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.markusVip.value,
+                                title: sirielC.markusvip.value,
                               ),
                             ),
                           ]),
@@ -1162,7 +1162,7 @@ class BedSection extends StatelessWidget {
                             ),
                             Obx(
                               () => TableObx(
-                                title: sirielC.teresiaTiga.value,
+                                title: sirielC.teresiatiga.value,
                               ),
                             ),
                           ]),
