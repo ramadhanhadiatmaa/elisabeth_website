@@ -1,7 +1,9 @@
 import 'package:elisabeth_website/app/data/constants/responsive.dart';
+import 'package:elisabeth_website/app/data/widgets/tools/button_widget.dart';
 import 'package:elisabeth_website/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../constants/color.dart';
 import '../tools/text_widget.dart';
@@ -59,7 +61,36 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.defaultDialog(
+                    title: "Pasien Baru",
+                    middleText:
+                        "Apakah kamu yakin belum pernah berobat di sini?",
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20.0,
+                      vertical: 10.0,
+                    ),
+                    titleStyle: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    middleTextStyle: GoogleFonts.montserrat(
+                        fontSize: 14, fontWeight: FontWeight.w500),
+                    actions: [
+                      ButtonWidget(
+                        title: "Batal",
+                        color: cRed,
+                        press: () => Get.back(),
+                      ),
+                      ButtonWidget(
+                        title: "Yakin",
+                        color: cBlue,
+                        press: () => Get.toNamed(
+                          Routes.baru,
+                        ),
+                      ),
+                    ]);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cBlue,
               ),
@@ -77,7 +108,9 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.lama);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cRed,
               ),
@@ -162,7 +195,36 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.defaultDialog(
+                    title: "Pasien Baru",
+                    middleText:
+                        "Apakah kamu yakin belum pernah berobat di sini?",
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20.0,
+                      vertical: 10.0,
+                    ),
+                    titleStyle: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    middleTextStyle: GoogleFonts.montserrat(
+                        fontSize: 14, fontWeight: FontWeight.w500),
+                    actions: [
+                      ButtonWidget(
+                        title: "Batal",
+                        color: cRed,
+                        press: () => Get.back(),
+                      ),
+                      ButtonWidget(
+                        title: "Yakin",
+                        color: cBlue,
+                        press: () => Get.toNamed(
+                          Routes.baru,
+                        ),
+                      ),
+                    ]);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cBlue,
               ),
@@ -269,7 +331,36 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.defaultDialog(
+                    title: "Pasien Baru",
+                    middleText:
+                        "Apakah kamu yakin belum pernah berobat di sini?",
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20.0,
+                      vertical: 10.0,
+                    ),
+                    titleStyle: GoogleFonts.montserrat(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    middleTextStyle: GoogleFonts.montserrat(
+                        fontSize: 14, fontWeight: FontWeight.w500),
+                    actions: [
+                      ButtonWidget(
+                        title: "Batal",
+                        color: cRed,
+                        press: () => Get.back(),
+                      ),
+                      ButtonWidget(
+                        title: "Yakin",
+                        color: cBlue,
+                        press: () => Get.toNamed(
+                          Routes.baru,
+                        ),
+                      ),
+                    ]);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cBlue,
               ),

@@ -11,6 +11,8 @@ abstract class Routes {
   static const terms = _Paths.terms;
   static const privacy = _Paths.privacy;
   static const doctor = _Paths.doctor;
+  static const baru = _Paths.baru;
+  static const lama = _Paths.lama;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const terms = '/terms';
   static const privacy = '/privacy';
   static const doctor = '/doctor';
+  static const baru = '/baru';
+  static const lama = '/lama';
 }

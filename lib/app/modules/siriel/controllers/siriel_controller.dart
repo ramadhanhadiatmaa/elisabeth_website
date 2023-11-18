@@ -4,15 +4,15 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class SirielController extends GetxController {
-  var markusNicu = "".obs;
-  var markusVvip = "".obs;
-  var markusVip = "".obs;
+  var markusnicu = "".obs;
+  var markusvvip = "".obs;
+  var markusvip = "".obs;
   var lukas = "".obs;
   var maria = "".obs;
   var fransiskus = "".obs;
   var matius = "".obs;
   var teresia = "".obs;
-  var teresiaTiga = "".obs;
+  var teresiatiga = "".obs;
   var yosef = "".obs;
   var klara = "".obs;
   var egidio = "".obs;
@@ -39,15 +39,15 @@ class SirielController extends GetxController {
       if (response.statusCode == 200) {
         final result = jsonDecode(response.body);
 
-        markusNicu.value = result['markus_nicu'].toString();
-        markusVvip.value = result['markus_vvip'].toString();
-        markusVip.value = result['markus_vip'].toString();
+        markusnicu.value = result['markusnicu'].toString();
+        markusvvip.value = result['markusvvip'].toString();
+        markusvip.value = result['markusvip'].toString();
         lukas.value = result['lukas'].toString();
         maria.value = result['maria'].toString();
         fransiskus.value = result['fransiskus'].toString();
         matius.value = result['matius'].toString();
         teresia.value = result['teresia'].toString();
-        teresiaTiga.value = result['teresia_tiga'].toString();
+        teresiatiga.value = result['teresiatiga'].toString();
         yosef.value = result['yosef'].toString();
         klara.value = result['klara'].toString();
         egidio.value = result['egidio'].toString();
