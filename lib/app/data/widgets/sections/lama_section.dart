@@ -41,7 +41,7 @@ class LamaSection extends StatelessWidget {
                     title: "No Rekam Medis",
                     controller: lamaC.rm,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Lengkap",
                     controller: lamaC.nama,
                   ),
@@ -94,7 +94,7 @@ class LamaSection extends StatelessWidget {
                     text: "*Kosongkan jika pembayaran umum atau rekanan",
                     controller: lamaC.bpjs,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tanggal Lahir (DD/MM/YYYY)",
                     controller: lamaC.lahir,
                   ),
@@ -104,7 +104,7 @@ class LamaSection extends StatelessWidget {
                         "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
                     controller: lamaC.hp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Alamat",
                     controller: lamaC.alamat,
                   ),
@@ -290,7 +290,7 @@ class LamaSection extends StatelessWidget {
                     title: "No Rekam Medis",
                     controller: lamaC.rm,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Lengkap",
                     controller: lamaC.nama,
                   ),
@@ -343,7 +343,7 @@ class LamaSection extends StatelessWidget {
                     text: "*Kosongkan jika pembayaran umum atau rekanan",
                     controller: lamaC.bpjs,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tanggal Lahir (DD/MM/YYYY)",
                     controller: lamaC.lahir,
                   ),
@@ -353,7 +353,7 @@ class LamaSection extends StatelessWidget {
                         "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
                     controller: lamaC.hp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Alamat",
                     controller: lamaC.alamat,
                   ),
@@ -541,7 +541,7 @@ class LamaSection extends StatelessWidget {
                       title: "No Rekam Medis",
                       controller: lamaC.rm,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Nama Lengkap",
                       controller: lamaC.nama,
                     ),
@@ -594,7 +594,7 @@ class LamaSection extends StatelessWidget {
                       text: "*Kosongkan jika pembayaran\numum atau rekanan",
                       controller: lamaC.bpjs,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Tanggal Lahir (DD/MM/YYYY)",
                       controller: lamaC.lahir,
                     ),
@@ -604,7 +604,7 @@ class LamaSection extends StatelessWidget {
                           "*Isi dengan nomor aktif, atau\nkosongkan jika tidak punya",
                       controller: lamaC.hp,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Alamat",
                       controller: lamaC.alamat,
                     ),

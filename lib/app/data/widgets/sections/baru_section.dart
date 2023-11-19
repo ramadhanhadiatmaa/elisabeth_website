@@ -1,10 +1,10 @@
-import 'package:elisabeth_website/app/data/constants/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../modules/baru/controllers/baru_controller.dart';
 import '../../constants/color.dart';
+import '../../constants/responsive.dart';
 import '../tools/button_widget.dart';
 import '../tools/form_widget.dart';
 import '../tools/text_info_widget.dart';
@@ -37,7 +37,7 @@ class BaruSection extends StatelessWidget {
                     title: "No KTP / KIA / SIM",
                     controller: baruC.ktp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Lengkap",
                     controller: baruC.nama,
                   ),
@@ -90,11 +90,11 @@ class BaruSection extends StatelessWidget {
                     text: "*Kosongkan jika pembayaran umum atau rekanan",
                     controller: baruC.bpjs,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tempat Lahir",
                     controller: baruC.tempat,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tanggal Lahir (DD/MM/YYYY)",
                     controller: baruC.lahir,
                   ),
@@ -104,7 +104,7 @@ class BaruSection extends StatelessWidget {
                         "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
                     controller: baruC.hp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Alamat",
                     controller: baruC.alamat,
                   ),
@@ -196,39 +196,39 @@ class BaruSection extends StatelessWidget {
                       ),
                     ],
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Ibu Kandung",
                     controller: baruC.ibu,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Family",
                     controller: baruC.keluarga,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Status Hubungan",
                     controller: baruC.status,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Suku",
                     controller: baruC.suku,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Pekerjaan",
                     controller: baruC.pekerjaan,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Propinsi",
                     controller: baruC.propinsi,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Kabupaten",
                     controller: baruC.kabupaten,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Kecamatan",
                     controller: baruC.kecamatan,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Desa",
                     controller: baruC.desa,
                   ),
@@ -410,7 +410,7 @@ class BaruSection extends StatelessWidget {
                     title: "No KTP / KIA / SIM",
                     controller: baruC.ktp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Lengkap",
                     controller: baruC.nama,
                   ),
@@ -463,11 +463,11 @@ class BaruSection extends StatelessWidget {
                     text: "*Kosongkan jika pembayaran umum atau rekanan",
                     controller: baruC.bpjs,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tempat Lahir",
                     controller: baruC.tempat,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Tanggal Lahir (DD/MM/YYYY)",
                     controller: baruC.lahir,
                   ),
@@ -477,7 +477,7 @@ class BaruSection extends StatelessWidget {
                         "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
                     controller: baruC.hp,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Alamat",
                     controller: baruC.alamat,
                   ),
@@ -569,39 +569,39 @@ class BaruSection extends StatelessWidget {
                       ),
                     ],
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Ibu Kandung",
                     controller: baruC.ibu,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Nama Family",
                     controller: baruC.keluarga,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Status Hubungan",
                     controller: baruC.status,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Suku",
                     controller: baruC.suku,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Pekerjaan",
                     controller: baruC.pekerjaan,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Propinsi",
                     controller: baruC.propinsi,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Kabupaten",
                     controller: baruC.kabupaten,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Kecamatan",
                     controller: baruC.kecamatan,
                   ),
-                  FormWidget(
+                  FormWidgetT(
                     title: "Desa",
                     controller: baruC.desa,
                   ),
@@ -785,7 +785,7 @@ class BaruSection extends StatelessWidget {
                       title: "No KTP / KIA / SIM",
                       controller: baruC.ktp,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Nama Lengkap",
                       controller: baruC.nama,
                     ),
@@ -838,11 +838,11 @@ class BaruSection extends StatelessWidget {
                       text: "*Kosongkan jika pembayaran\numum atau rekanan",
                       controller: baruC.bpjs,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Tempat Lahir",
                       controller: baruC.tempat,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Tanggal Lahir (DD/MM/YYYY)",
                       controller: baruC.lahir,
                     ),
@@ -852,7 +852,7 @@ class BaruSection extends StatelessWidget {
                           "*Isi dengan nomor aktif, atau\nkosongkan jika tidak punya",
                       controller: baruC.hp,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Alamat",
                       controller: baruC.alamat,
                     ),
@@ -944,39 +944,39 @@ class BaruSection extends StatelessWidget {
                         ),
                       ],
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Nama Ibu Kandung",
                       controller: baruC.ibu,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Nama Family",
                       controller: baruC.keluarga,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Status Hubungan",
                       controller: baruC.status,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Suku",
                       controller: baruC.suku,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Pekerjaan",
                       controller: baruC.pekerjaan,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Propinsi",
                       controller: baruC.propinsi,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Kabupaten",
                       controller: baruC.kabupaten,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Kecamatan",
                       controller: baruC.kecamatan,
                     ),
-                    FormWidget(
+                    FormWidgetT(
                       title: "Desa",
                       controller: baruC.desa,
                     ),

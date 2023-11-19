@@ -242,7 +242,9 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.lama);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cRed,
               ),
@@ -378,7 +380,9 @@ class BookingSection extends StatelessWidget {
               height: 15,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.lama);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: cRed,
               ),
