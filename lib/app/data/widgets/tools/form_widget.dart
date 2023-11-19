@@ -23,8 +23,45 @@ class FormWidget extends StatelessWidget {
         TextField(
           autocorrect: false,
           controller: controller,
-          maxLines: 1,
           keyboardType: TextInputType.number,
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(
+                10,
+              ),
+            ),
+            labelText: title,
+            labelStyle: const TextStyle(
+              color: cGrey,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class FormWidgetT extends StatelessWidget {
+  const FormWidgetT({
+    super.key,
+    required this.title,
+    required this.controller,
+  });
+
+  final String title;
+  final TextEditingController controller;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const SizedBox(
+          height: 25,
+        ),
+        TextField(
+          autocorrect: false,
+          controller: controller,
+          keyboardType: TextInputType.text,
           decoration: InputDecoration(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(
@@ -77,7 +114,6 @@ class FormTextWidget extends StatelessWidget {
         TextField(
           autocorrect: false,
           controller: controller,
-          maxLines: 1,
           keyboardType: TextInputType.text,
           decoration: InputDecoration(
             border: OutlineInputBorder(

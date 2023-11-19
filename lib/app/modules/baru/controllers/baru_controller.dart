@@ -311,7 +311,7 @@ class BaruController extends GetxController {
           Get.snackbar("Error Information", "Nomor KTP tidak boleh kosong");
         }
       } else {
-        Get.snackbar("Error Information", "${response.statusCode}");
+        Get.snackbar("${response.statusCode}", response.body);
       }
     } catch (e) {
       Get.snackbar("Error Information", "$e");

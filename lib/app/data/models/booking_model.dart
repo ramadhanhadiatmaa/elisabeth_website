@@ -8,8 +8,8 @@ String bookingModelToJson(List<BookingModel> data) =>
 
 class BookingModel {
   String id;
-  int ktp;
-  int bpjs;
+  String ktp;
+  String bpjs;
   String rm;
   String bayar;
   String nama;
