@@ -114,7 +114,7 @@ class FormTextWidget extends StatelessWidget {
         TextField(
           autocorrect: false,
           controller: controller,
-          keyboardType: TextInputType.text,
+          keyboardType: TextInputType.number,
           decoration: InputDecoration(
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(
