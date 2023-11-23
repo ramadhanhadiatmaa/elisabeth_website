@@ -19,7 +19,7 @@ class InformationSection extends StatelessWidget {
             size: 16,
           ),
           Container(
-            height: 800,
+            height: 600,
             color: cWhite,
             width: MediaQuery.sizeOf(context).width,
             child: const Padding(
@@ -28,6 +28,7 @@ class InformationSection extends StatelessWidget {
                 top: 20,
               ),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: EdgeInsets.only(

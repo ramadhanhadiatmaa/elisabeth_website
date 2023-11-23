@@ -33,29 +33,13 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 70,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Total Kamar : 47",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                /* Container(
-                  color: cBlue,
-                  width: 700,
-                  height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Tersedia: 48",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Total Kamar : ${sirielC.total.value} Kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
                 ),
                 const SizedBox(
@@ -65,18 +49,34 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Ditempati : ",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Tersedia: ${sirielC.tersedia.value} Kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
-                ), */
-                /* const SizedBox(
+                ),
+                const SizedBox(
                   height: 20,
-                ), */
+                ),
+                Container(
+                  color: cBlue,
+                  width: 700,
+                  height: 50,
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Ditempati : ${sirielC.terisi.value} Kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 SizedBox(
                   width: 700,
                   child: Table(
@@ -134,7 +134,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      /* TableRow(
+                      TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -167,26 +167,26 @@ class BedSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const TableCell(
+                            TableCell(
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: TextWidgetMon(
-                                  align: TextAlign.center,
-                                  title: "47",
-                                  size: 14,
-                                  weight: FontWeight.w400,
-                                  color: cBlue,
-                                ),
+                                padding: const EdgeInsets.all(8.0),
+                                child: Obx(() => TextWidgetMon(
+                                      align: TextAlign.center,
+                                      title: sirielC.tersedia.value,
+                                      size: 14,
+                                      weight: FontWeight.w400,
+                                      color: cBlue,
+                                    )),
                               ),
                             ),
-                          ]), */
+                          ]),
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Markus",
+                              title: "ST. Markus",
                               size: 30,
                             ),
                             const TableObx(
@@ -204,7 +204,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Markus",
+                              title: "ST. Markus",
                               size: 30,
                             ),
                             const TableObx(
@@ -222,7 +222,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Markus",
+                              title: "ST. Markus",
                               size: 30,
                             ),
                             const TableObx(
@@ -240,7 +240,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Lukas",
+                              title: "ST. Lukas",
                               size: 30,
                             ),
                             const TableObx(
@@ -258,7 +258,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Maria",
+                              title: "ST. Maria",
                               size: 30,
                             ),
                             const TableObx(
@@ -276,7 +276,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Matius",
+                              title: "ST. Matius",
                               size: 30,
                             ),
                             const TableObx(
@@ -294,7 +294,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Fransiskus",
+                              title: "ST. Fransiskus",
                               size: 30,
                             ),
                             const TableObx(
@@ -312,7 +312,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Teresia",
+                              title: "ST. Teresia",
                               size: 30,
                             ),
                             const TableObx(
@@ -330,7 +330,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Yosef",
+                              title: "ST. Yosef",
                               size: 30,
                             ),
                             const TableObx(
@@ -348,7 +348,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Teresia",
+                              title: "ST. Teresia",
                               size: 30,
                             ),
                             const TableObx(
@@ -366,7 +366,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Egidio",
+                              title: "ST. Egidio",
                               size: 30,
                             ),
                             const TableObx(
@@ -384,7 +384,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Klara",
+                              title: "ST. Klara",
                               size: 30,
                             ),
                             const TableObx(
@@ -402,7 +402,7 @@ class BedSection extends StatelessWidget {
                           ),
                           children: [
                             const TableCon(
-                              title: "ST.Yohanes",
+                              title: "ST. Yohanes",
                               size: 30,
                             ),
                             const TableObx(
@@ -436,29 +436,13 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Total Kamar : 47",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                /*  const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  color: cBlue,
-                  width: 700,
-                  height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Tersedia: 48",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Total Kamar : ${sirielC.total.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
                 ),
                 const SizedBox(
@@ -468,15 +452,31 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Ditempati : ",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Tersedia: ${sirielC.tersedia.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
-                ),*/
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  color: cBlue,
+                  width: 700,
+                  height: 50,
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Ditempati : ${sirielC.terisi.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
+                  ),
+                ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -537,7 +537,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      /*  TableRow(
+                      TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -570,19 +570,19 @@ class BedSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const TableCell(
+                            TableCell(
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: TextWidgetMon(
-                                  align: TextAlign.center,
-                                  title: "48",
-                                  size: 14,
-                                  weight: FontWeight.w400,
-                                  color: cBlue,
-                                ),
+                                padding: const EdgeInsets.all(8.0),
+                                child: Obx(() => TextWidgetMon(
+                                      align: TextAlign.center,
+                                      title: sirielC.tersedia.value,
+                                      size: 14,
+                                      weight: FontWeight.w400,
+                                      color: cBlue,
+                                    )),
                               ),
                             ),
-                          ]), */
+                          ]),
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
@@ -839,29 +839,13 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Total Kamar : 47",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                /* const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  color: cBlue,
-                  width: 700,
-                  height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Tersedia: 48",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Total Kamar : ${sirielC.total.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
                 ),
                 const SizedBox(
@@ -871,15 +855,31 @@ class BedSection extends StatelessWidget {
                   color: cBlue,
                   width: 700,
                   height: 50,
-                  child: const Center(
-                    child: TextWidgetMon(
-                      title: "Ditempati : ",
-                      size: 20,
-                      weight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Tersedia: ${sirielC.tersedia.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
                   ),
-                ), */
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  color: cBlue,
+                  width: 700,
+                  height: 50,
+                  child: Center(
+                    child: Obx(() => TextWidgetMon(
+                          title: "Ditempati : ${sirielC.terisi.value} kamar",
+                          size: 20,
+                          weight: FontWeight.w500,
+                          color: Colors.white,
+                        )),
+                  ),
+                ),
                 const SizedBox(
                   height: 20,
                 ),
@@ -940,7 +940,7 @@ class BedSection extends StatelessWidget {
                               ),
                             ),
                           ]),
-                      /*  TableRow(
+                      TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,
                           ),
@@ -973,19 +973,19 @@ class BedSection extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const TableCell(
+                            TableCell(
                               child: Padding(
-                                padding: EdgeInsets.all(8.0),
-                                child: TextWidgetMon(
-                                  align: TextAlign.center,
-                                  title: "48",
-                                  size: 14,
-                                  weight: FontWeight.w400,
-                                  color: cBlue,
-                                ),
+                                padding: const EdgeInsets.all(8.0),
+                                child: Obx(() => TextWidgetMon(
+                                      align: TextAlign.center,
+                                      title: sirielC.tersedia.value,
+                                      size: 14,
+                                      weight: FontWeight.w400,
+                                      color: cBlue,
+                                    )),
                               ),
                             ),
-                          ]), */
+                          ]),
                       TableRow(
                           decoration: const BoxDecoration(
                             color: cWhite,

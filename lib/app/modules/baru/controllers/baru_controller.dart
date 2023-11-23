@@ -175,7 +175,7 @@ class BaruController extends GetxController {
       final response =
           await http.post(Uri.parse(url), body: body, headers: headers);
 
-      if (ktp.text.isNotEmpty) {
+      if (ktp.text.isNotEmpty && nama.text.isNotEmpty) {
         if (isAgree.isTrue) {
           if (isRight.isTrue) {
             if (response.statusCode == 200) {
@@ -316,14 +316,16 @@ class BaruController extends GetxController {
               Get.snackbar("${response.statusCode}", response.body);
             }
           } else {
-            Get.snackbar("Error Information", "Silakan ceklis pengisian data");
+            Get.snackbar("Error Information",
+                "Anda belum mengonfirmasi bahwa data yang diisi sudah benar.");
           }
         } else {
           Get.snackbar("Error Information",
               "Anda belum menyetujui kebijakan privasi dan aturan pengguna.");
         }
       } else {
-        Get.snackbar("Error Information", "Nomor KTP tidak boleh kosong");
+        Get.snackbar(
+            "Error Information", "Nomor KTP dan nama tidak boleh kosong.");
       }
     } catch (e) {
       Get.snackbar("Error Information", "$e");

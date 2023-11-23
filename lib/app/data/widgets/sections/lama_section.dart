@@ -89,24 +89,14 @@ class LamaSection extends StatelessWidget {
                       ),
                     ],
                   ),
-                  FormTextWidget(
-                    title: "No BPJS",
-                    text: "*Kosongkan jika pembayaran umum atau rekanan",
-                    controller: lamaC.bpjs,
-                  ),
-                  FormWidgetT(
-                    title: "Tanggal Lahir (DD/MM/YYYY)",
-                    controller: lamaC.lahir,
-                  ),
-                  FormTextWidget(
-                    title: "No Handphone",
-                    text:
-                        "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
-                    controller: lamaC.hp,
-                  ),
-                  FormWidgetT(
-                    title: "Alamat",
-                    controller: lamaC.alamat,
+                  Obx(
+                    () => Visibility(
+                        visible: lamaC.bayarSelected.value == "BPJS",
+                        child: FormTextWidget(
+                          title: "No BPJS",
+                          text: "*Kosongkan jika pembayaran umum atau rekanan",
+                          controller: lamaC.bpjs,
+                        )),
                   ),
                   const SizedBox(
                     height: 25,
@@ -118,7 +108,7 @@ class LamaSection extends StatelessWidget {
                         children: [
                           const TextWidgetMon(
                             align: TextAlign.start,
-                            title: "Daftar Poli Ke -",
+                            title: "Daftar Ke Poli-",
                             size: 12,
                             weight: FontWeight.w600,
                             color: cBlack,
@@ -162,7 +152,7 @@ class LamaSection extends StatelessWidget {
                         children: [
                           const TextWidgetMon(
                             align: TextAlign.start,
-                            title: "Pada Tanggal",
+                            title: "Tanggal",
                             size: 12,
                             weight: FontWeight.w600,
                             color: cBlack,
@@ -194,13 +184,9 @@ class LamaSection extends StatelessWidget {
                               )),
                         ],
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Row(
-                    children: [
+                      const SizedBox(
+                        width: 30,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -241,15 +227,41 @@ class LamaSection extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 25,
+                    height: 10,
                   ),
-                  const TextWidgetMon(
-                    align: TextAlign.justify,
-                    title:
-                        "*Pastikan semua informasi diisi dengan benar dan sesuai dengan ketentuan untuk keperluan pendaftaran.",
-                    size: 12,
-                    weight: FontWeight.w300,
-                    color: cBlack,
+                  Obx(
+                    () => Column(
+                      children: [
+                        CheckboxListTile(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          value: lamaC.isAgree.value,
+                          onChanged: (value) {
+                            lamaC.isAgree.toggle();
+                          },
+                          title: const TextWidgetMon(
+                            title:
+                                "Saya telah membaca kebijakan privasi dan aturan pengguna website Rumah Sakit Umum Santa Elisabeth Sambas",
+                            color: cBlack,
+                            size: 10,
+                            weight: FontWeight.w300,
+                          ),
+                        ),
+                        CheckboxListTile(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          value: lamaC.isRight.value,
+                          onChanged: (value) {
+                            lamaC.isRight.toggle();
+                          },
+                          title: const TextWidgetMon(
+                            title:
+                                "Saya telah mengisi semua data di atas dengan benar",
+                            color: cBlack,
+                            size: 10,
+                            weight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 25,
@@ -338,24 +350,14 @@ class LamaSection extends StatelessWidget {
                       ),
                     ],
                   ),
-                  FormTextWidget(
-                    title: "No BPJS",
-                    text: "*Kosongkan jika pembayaran umum atau rekanan",
-                    controller: lamaC.bpjs,
-                  ),
-                  FormWidgetT(
-                    title: "Tanggal Lahir (DD/MM/YYYY)",
-                    controller: lamaC.lahir,
-                  ),
-                  FormTextWidget(
-                    title: "No Handphone",
-                    text:
-                        "*Isi dengan nomor aktif, atau kosongkan jika tidak punya",
-                    controller: lamaC.hp,
-                  ),
-                  FormWidgetT(
-                    title: "Alamat",
-                    controller: lamaC.alamat,
+                  Obx(
+                    () => Visibility(
+                        visible: lamaC.bayarSelected.value == "BPJS",
+                        child: FormTextWidget(
+                          title: "No BPJS",
+                          text: "*Kosongkan jika pembayaran umum atau rekanan",
+                          controller: lamaC.bpjs,
+                        )),
                   ),
                   const SizedBox(
                     height: 25,
@@ -367,7 +369,7 @@ class LamaSection extends StatelessWidget {
                         children: [
                           const TextWidgetMon(
                             align: TextAlign.start,
-                            title: "Daftar Poli Ke -",
+                            title: "Daftar Ke Poli-",
                             size: 12,
                             weight: FontWeight.w600,
                             color: cBlack,
@@ -411,7 +413,7 @@ class LamaSection extends StatelessWidget {
                         children: [
                           const TextWidgetMon(
                             align: TextAlign.start,
-                            title: "Pada Tanggal",
+                            title: "Tanggal",
                             size: 12,
                             weight: FontWeight.w600,
                             color: cBlack,
@@ -443,13 +445,9 @@ class LamaSection extends StatelessWidget {
                               )),
                         ],
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  Row(
-                    children: [
+                      const SizedBox(
+                        width: 30,
+                      ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -490,15 +488,41 @@ class LamaSection extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 25,
+                    height: 10,
                   ),
-                  const TextWidgetMon(
-                    align: TextAlign.justify,
-                    title:
-                        "*Pastikan semua informasi diisi dengan benar dan sesuai dengan ketentuan untuk keperluan pendaftaran.",
-                    size: 12,
-                    weight: FontWeight.w300,
-                    color: cBlack,
+                  Obx(
+                    () => Column(
+                      children: [
+                        CheckboxListTile(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          value: lamaC.isAgree.value,
+                          onChanged: (value) {
+                            lamaC.isAgree.toggle();
+                          },
+                          title: const TextWidgetMon(
+                            title:
+                                "Saya telah membaca kebijakan privasi dan aturan pengguna website Rumah Sakit Umum Santa Elisabeth Sambas",
+                            color: cBlack,
+                            size: 10,
+                            weight: FontWeight.w300,
+                          ),
+                        ),
+                        CheckboxListTile(
+                          controlAffinity: ListTileControlAffinity.leading,
+                          value: lamaC.isRight.value,
+                          onChanged: (value) {
+                            lamaC.isRight.toggle();
+                          },
+                          title: const TextWidgetMon(
+                            title:
+                                "Saya telah mengisi semua data di atas dengan benar",
+                            color: cBlack,
+                            size: 10,
+                            weight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 25,
@@ -589,24 +613,15 @@ class LamaSection extends StatelessWidget {
                         ),
                       ],
                     ),
-                    FormTextWidget(
-                      title: "No BPJS",
-                      text: "*Kosongkan jika pembayaran\numum atau rekanan",
-                      controller: lamaC.bpjs,
-                    ),
-                    FormWidgetT(
-                      title: "Tanggal Lahir (DD/MM/YYYY)",
-                      controller: lamaC.lahir,
-                    ),
-                    FormTextWidget(
-                      title: "No Handphone",
-                      text:
-                          "*Isi dengan nomor aktif, atau\nkosongkan jika tidak punya",
-                      controller: lamaC.hp,
-                    ),
-                    FormWidgetT(
-                      title: "Alamat",
-                      controller: lamaC.alamat,
+                    Obx(
+                      () => Visibility(
+                          visible: lamaC.bayarSelected.value == "BPJS",
+                          child: FormTextWidget(
+                            title: "No BPJS",
+                            text:
+                                "*Kosongkan jika pembayaran umum atau rekanan",
+                            controller: lamaC.bpjs,
+                          )),
                     ),
                     const SizedBox(
                       height: 25,
@@ -618,7 +633,7 @@ class LamaSection extends StatelessWidget {
                           children: [
                             const TextWidgetMon(
                               align: TextAlign.start,
-                              title: "Daftar Poli Ke -",
+                              title: "Daftar Ke Poli-",
                               size: 12,
                               weight: FontWeight.w600,
                               color: cBlack,
@@ -694,13 +709,9 @@ class LamaSection extends StatelessWidget {
                                 )),
                           ],
                         ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 25,
-                    ),
-                    Row(
-                      children: [
+                        const SizedBox(
+                          width: 30,
+                        ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -741,15 +752,41 @@ class LamaSection extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 10,
                     ),
-                    const TextWidgetMon(
-                      align: TextAlign.justify,
-                      title:
-                          "*Pastikan semua informasi diisi dengan benar dan sesuai dengan ketentuan untuk keperluan pendaftaran.",
-                      size: 12,
-                      weight: FontWeight.w300,
-                      color: cBlack,
+                    Obx(
+                      () => Column(
+                        children: [
+                          CheckboxListTile(
+                            controlAffinity: ListTileControlAffinity.leading,
+                            value: lamaC.isAgree.value,
+                            onChanged: (value) {
+                              lamaC.isAgree.toggle();
+                            },
+                            title: const TextWidgetMon(
+                              title:
+                                  "Saya telah membaca kebijakan privasi dan aturan pengguna website Rumah Sakit Umum Santa Elisabeth Sambas",
+                              color: cBlack,
+                              size: 10,
+                              weight: FontWeight.w300,
+                            ),
+                          ),
+                          CheckboxListTile(
+                            controlAffinity: ListTileControlAffinity.leading,
+                            value: lamaC.isRight.value,
+                            onChanged: (value) {
+                              lamaC.isRight.toggle();
+                            },
+                            title: const TextWidgetMon(
+                              title:
+                                  "Saya telah mengisi semua data di atas dengan benar",
+                              color: cBlack,
+                              size: 10,
+                              weight: FontWeight.w300,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(
                       height: 25,

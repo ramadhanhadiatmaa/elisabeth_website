@@ -9,6 +9,9 @@ import '../../../data/widgets/tools/text_widget.dart';
 import 'package:http/http.dart' as http;
 
 class LamaController extends GetxController {
+  RxBool isAgree = false.obs;
+  RxBool isRight = false.obs;
+
   var bayar = <String>[].obs;
   var poli = <String>[].obs;
   var tanggal = <String>[].obs;
@@ -130,137 +133,146 @@ class LamaController extends GetxController {
       final response =
           await http.post(Uri.parse(url), body: body, headers: headers);
 
-      if (response.statusCode == 200) {
-        if (ktp.text.isNotEmpty) {
-          var name = nama.text;
-          var type = bayarSelected.value;
-          var noKtp = ktp.text;
+      if (ktp.text.isNotEmpty && nama.text.isNotEmpty && rm.text.isNotEmpty) {
+        if (isAgree.isTrue && isRight.isTrue) {
+          if (response.statusCode == 200) {
+            var name = nama.text;
+            var type = bayarSelected.value;
+            var noKtp = ktp.text;
 
-          Get.defaultDialog(
-              title: "",
-              content: Column(
-                children: [
-                  const TextWidgetMon(
-                    align: TextAlign.center,
-                    title: "RSU SANTA ELISABETH SAMBAS",
-                    size: 16,
-                    weight: FontWeight.w800,
-                    color: cBlack,
-                  ),
-                  const TextWidgetMon(
-                    align: TextAlign.center,
-                    title: "Jalan Gusti Hamzah No.29 Sambas 79411",
-                    size: 12,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 150,
-                        width: 150,
-                        child: QrImageView(
-                          data: noKtp,
-                          version: QrVersions.auto,
+            Get.defaultDialog(
+                title: "",
+                content: Column(
+                  children: [
+                    const TextWidgetMon(
+                      align: TextAlign.center,
+                      title: "RSU SANTA ELISABETH SAMBAS",
+                      size: 16,
+                      weight: FontWeight.w800,
+                      color: cBlack,
+                    ),
+                    const TextWidgetMon(
+                      align: TextAlign.center,
+                      title: "Jalan Gusti Hamzah No.29 Sambas 79411",
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 150,
+                          width: 150,
+                          child: QrImageView(
+                            data: noKtp,
+                            version: QrVersions.auto,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                        width: 1,
+                        color: cBlack,
+                      )),
+                      child: Padding(
+                        padding: const EdgeInsets.all(2.0),
+                        child: TextWidgetMon(
+                          title: type,
+                          size: 24,
+                          weight: FontWeight.w800,
+                          color: cBlack,
                         ),
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(
-                      width: 1,
-                      color: cBlack,
-                    )),
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: TextWidgetMon(
-                        title: type,
-                        size: 24,
-                        weight: FontWeight.w800,
-                        color: cBlack,
-                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const TextWidgetMon(
-                    title: "Pendaftaran Pasien:",
-                    size: 8,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  TextWidgetMon(
-                    title: name,
-                    size: 12,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const TextWidgetMon(
-                    title: "Poli:",
-                    size: 8,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  TextWidgetMon(
-                    title: poliSelected.value,
-                    size: 12,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const TextWidgetMon(
-                    title: "Pada:",
-                    size: 8,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  TextWidgetMon(
-                    title:
-                        "${tanggalSelected.value} ${bulanSelected.value} 2023",
-                    size: 12,
-                    weight: FontWeight.w400,
-                    color: cBlack,
-                  ),
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  const TextWidgetMon(
-                    align: TextAlign.center,
-                    title:
-                        "*ScreenShoot bukti pendaftaran, dan tunjukan bukti ini\nkepada petugas di loket pendaftaran.",
-                    size: 8,
-                    weight: FontWeight.w500,
-                    color: cBlack,
-                  ),
-                ],
-              ));
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const TextWidgetMon(
+                      title: "Pendaftaran Pasien:",
+                      size: 8,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    TextWidgetMon(
+                      title: name,
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const TextWidgetMon(
+                      title: "Poli:",
+                      size: 8,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    TextWidgetMon(
+                      title: poliSelected.value,
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const TextWidgetMon(
+                      title: "Pada:",
+                      size: 8,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    TextWidgetMon(
+                      title:
+                          "${tanggalSelected.value} ${bulanSelected.value} 2023",
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: cBlack,
+                    ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    const TextWidgetMon(
+                      align: TextAlign.center,
+                      title:
+                          "*ScreenShoot bukti pendaftaran, dan tunjukan bukti ini\nkepada petugas di loket pendaftaran.",
+                      size: 8,
+                      weight: FontWeight.w500,
+                      color: cBlack,
+                    ),
+                  ],
+                ));
 
-          ktp.clear();
-          rm.clear();
-          nama.clear();
-          bpjs.clear();
-          hp.clear();
-          alamat.clear();
-          lahir.clear();
+            ktp.clear();
+            rm.clear();
+            nama.clear();
+            bpjs.clear();
+            hp.clear();
+            alamat.clear();
+            lahir.clear();
+          } else if (response.statusCode == 500) {
+            Get.snackbar("Error Information",
+                "NIK anda telah terdaftar untuk poli yang dituju");
+          } else {
+            Get.snackbar("${response.statusCode}", response.body);
+          }
         } else {
-          Get.snackbar("Error Information", "Nomor KTP tidak boleh kosong");
+          Get.snackbar("Error Information",
+              "Anda belum menyetujui kebijakan privasi dan aturan pengguna, serta belum mengisi data dengan benar.");
         }
       } else {
-        Get.snackbar("${response.statusCode}", response.body);
+        Get.snackbar("Error Information",
+            "Nomor KTP, nama dan nomor rekam medis tidak boleh kosong");
       }
     } catch (e) {
       Get.snackbar("Error Information", "$e");

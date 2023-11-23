@@ -1,28 +1,31 @@
 import 'dart:convert';
 
-DokterModel dokterModelFromJson(String str) =>
-    DokterModel.fromJson(json.decode(str));
+KamarModel kamarModelFromJson(String str) =>
+    KamarModel.fromJson(json.decode(str));
 
-String dokterModelToJson(DokterModel data) => json.encode(data.toJson());
+String kamarModelToJson(KamarModel data) => json.encode(data.toJson());
 
-class DokterModel {
+class KamarModel {
   String id;
-  String markusnicu;
-  String markusvvip;
-  String markusvip;
-  String lukas;
-  String maria;
-  String fransiskus;
-  String matius;
-  String teresia;
-  String teresiatiga;
-  String yosef;
-  String klara;
-  String egidio;
-  String yohanes;
+  int markusnicu;
+  int markusvvip;
+  int markusvip;
+  int lukas;
+  int maria;
+  int fransiskus;
+  int matius;
+  int teresia;
+  int teresiatiga;
+  int yosef;
+  int klara;
+  int egidio;
+  int yohanes;
+  int total;
+  int tersedia;
+  int terisi;
   DateTime updatedAt;
 
-  DokterModel({
+  KamarModel({
     required this.id,
     required this.markusnicu,
     required this.markusvvip,
@@ -37,10 +40,13 @@ class DokterModel {
     required this.klara,
     required this.egidio,
     required this.yohanes,
+    required this.total,
+    required this.tersedia,
+    required this.terisi,
     required this.updatedAt,
   });
 
-  factory DokterModel.fromJson(Map<String, dynamic> json) => DokterModel(
+  factory KamarModel.fromJson(Map<String, dynamic> json) => KamarModel(
         id: json["id"],
         markusnicu: json["markusnicu"],
         markusvvip: json["markusvvip"],
@@ -55,6 +61,9 @@ class DokterModel {
         klara: json["klara"],
         egidio: json["egidio"],
         yohanes: json["yohanes"],
+        total: json["total"],
+        tersedia: json["tersedia"],
+        terisi: json["terisi"],
         updatedAt: DateTime.parse(json["updated_at"]),
       );
 
@@ -73,6 +82,9 @@ class DokterModel {
         "klara": klara,
         "egidio": egidio,
         "yohanes": yohanes,
+        "total": total,
+        "tersedia": tersedia,
+        "terisi": terisi,
         "updated_at": updatedAt.toIso8601String(),
       };
 }

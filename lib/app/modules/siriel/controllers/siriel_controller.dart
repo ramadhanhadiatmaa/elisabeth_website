@@ -17,6 +17,9 @@ class SirielController extends GetxController {
   var klara = "".obs;
   var egidio = "".obs;
   var yohanes = "".obs;
+  var total = "".obs;
+  var tersedia = "".obs;
+  var terisi = "".obs;
 
   @override
   void onInit() {
@@ -52,6 +55,9 @@ class SirielController extends GetxController {
         klara.value = result['klara'].toString();
         egidio.value = result['egidio'].toString();
         yohanes.value = result['yohanes'].toString();
+        total.value = result['total'].toString();
+        tersedia.value = result['tersedia'].toString();
+        terisi.value = result['terisi'].toString();
       } else {
         printError();
       }
