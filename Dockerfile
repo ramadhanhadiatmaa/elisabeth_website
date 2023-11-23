@@ -1,17 +1,34 @@
-# Use an official Nginx runtime as the parent image
-FROM nginx:latest
+# Use the official Flutter image as the base image
+FROM ghcr.io/cirruslabs/flutter:3.13.7 as build
 
-# Create a new folder named "assets" in the /usr/share/nginx/html/ directory
-#RUN mkdir -p /usr/share/nginx/html/assets
+# Set the working directory
+WORKDIR /app
 
-# Copy the build output to serve the application
-COPY build/web/ /usr/share/nginx/html
+# Copy the pubspec.* files to leverage Docker’s caching mechanism
+COPY pubspec.* ./
+
+# Get the dependencies (you might want to add more commands here depending on your project)
+RUN dart pub get
+
+# Copy the entire project
+COPY . .
+
+# Build the Flutter web app
+RUN dart pub get && \
+    dart pub global activate webdev 
+
+RUN flutter build web --release --web-renderer html
+
+# Use NGINX as a lightweight HTTP server
+FROM nginx:alpine
+
+# Copy the built web app from the previous stage into NGINX's html directory
+COPY --from=build /app/build/web /usr/share/nginx/html
 
 COPY assets/ /usr/share/nginx/html/assets
 
-# Expose port 80 for serving the app
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx server
+# Start NGINX server when the container starts
 CMD ["nginx", "-g", "daemon off;"]
-
