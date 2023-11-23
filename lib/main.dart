@@ -10,7 +10,7 @@ void main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Santa Elisabeth Sambas",
+      title: "RSU Santa Elisabeth Sambas",
       initialRoute: Routes.home,
       getPages: AppPages.routes,
       defaultTransition: Transition.noTransition,

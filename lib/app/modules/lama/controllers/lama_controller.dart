@@ -24,9 +24,9 @@ class LamaController extends GetxController {
   TextEditingController rm = TextEditingController();
   TextEditingController nama = TextEditingController();
   TextEditingController bpjs = TextEditingController();
+  TextEditingController lahir = TextEditingController();
   TextEditingController hp = TextEditingController();
   TextEditingController alamat = TextEditingController();
-  TextEditingController lahir = TextEditingController();
 
   @override
   void onInit() {
@@ -113,6 +113,7 @@ class LamaController extends GetxController {
 
       Map<String, dynamic> body = {
         "ktp": ktp.text,
+        "rm": rm.text,
         "nama": nama.text,
         "bpjs": bpjs.text,
         "bayar": bayarSelected.value,

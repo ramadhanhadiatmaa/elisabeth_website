@@ -201,27 +201,27 @@ class TermSection extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              width: MediaQuery.sizeOf(context).width * 0.9,
-              height: MediaQuery.sizeOf(context).height * 3.4,
+              width: MediaQuery.sizeOf(context).width * 0.95,
+              height: MediaQuery.sizeOf(context).height * 1.6,
               color: cWhite,
               child: const Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextWidgetMon(
                       title: "Syarat Penggunaaan",
-                      size: 20,
-                      weight: FontWeight.w500,
+                      size: 16,
+                      weight: FontWeight.w800,
                       color: cBlack,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     TextWidgetMon(
                       align: TextAlign.justify,
                       title: pengguna,
-                      size: 14,
+                      size: 10,
                       weight: FontWeight.w400,
                       color: cBlack,
                     ),
@@ -230,17 +230,17 @@ class TermSection extends StatelessWidget {
                     ),
                     TextWidgetMon(
                       title: "Hak Cipta",
-                      size: 20,
-                      weight: FontWeight.w500,
+                      size: 16,
+                      weight: FontWeight.w800,
                       color: cBlack,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     TextWidgetMon(
                       align: TextAlign.justify,
                       title: cipta,
-                      size: 14,
+                      size: 10,
                       weight: FontWeight.w400,
                       color: cBlack,
                     ),
@@ -249,17 +249,17 @@ class TermSection extends StatelessWidget {
                     ),
                     TextWidgetMon(
                       title: "Penolakan",
-                      size: 20,
-                      weight: FontWeight.w500,
+                      size: 16,
+                      weight: FontWeight.w800,
                       color: cBlack,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     TextWidgetMon(
                       align: TextAlign.justify,
                       title: tolak,
-                      size: 14,
+                      size: 10,
                       weight: FontWeight.w400,
                       color: cBlack,
                     ),
@@ -268,17 +268,17 @@ class TermSection extends StatelessWidget {
                     ),
                     TextWidgetMon(
                       title: "Kebijakan Privasi",
-                      size: 20,
-                      weight: FontWeight.w500,
+                      size: 16,
+                      weight: FontWeight.w800,
                       color: cBlack,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 5,
                     ),
                     TextWidgetMon(
                       align: TextAlign.justify,
                       title: tolak,
-                      size: 14,
+                      size: 10,
                       weight: FontWeight.w400,
                       color: cBlack,
                     ),
